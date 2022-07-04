@@ -148,8 +148,6 @@ const gameFlow = (() => {
             if (gameBoard.getSquare(i) === '') { availableSpaces.push(i); }
         }
 
-        console.log(availableSpaces);
-
         switch (gameMode) {
             case (0):
                 playerVsComputer();
@@ -391,7 +389,6 @@ const gameFlow = (() => {
     };
 
     const canWin = () => {
-        console.log('here');
         for (let i = 0; i < possibilities.length; i++) {
             let xCount = 0;
             let oCount = 0;
@@ -403,7 +400,6 @@ const gameFlow = (() => {
                     oCount++;
                 }
             }
-            console.log(xCount, oCount);
             if (oCount === 2 && xCount === 0) {
                 for (let k = 0; k < possibilities[i].length; k++) {
                     if (availableSpaces.includes(possibilities[i][k])) {

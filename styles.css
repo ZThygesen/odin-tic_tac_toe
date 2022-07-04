@@ -1,3 +1,11 @@
+:root {
+    --boardBgc: #f4decb;
+    --squareBgc: #49274a;
+    --bgc: #49274a;
+    --font: #f4decb;
+    --grape: #94618e;
+}
+
 body {
     height: 100vh;
     width: 100vw;
@@ -6,6 +14,20 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0;
+    background-color: var(--bgc);
+    color: var(--font);
+    font-family: 'Heebo', sans-serif;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 60px;
 }
 
 .content {
@@ -14,6 +36,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 50px;
 }
 
 .play-area {
@@ -21,16 +44,59 @@ body {
     gap: 5vw;
 }
 
+.message {
+    margin-bottom: -30px;
+    font-size: 30px;
+}
+
 .board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    width: min(50vw, 600px);
-    height: min(50vw, 600px);
+    width: min(50vh, 600px);
+    height: min(50vh, 600px);
+    background-color: var(--boardBgc);
+    gap: 10px;
+}
+
+.square {
+    background-color: var(--squareBgc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10vh;
+    font-weight: 500;
 }
 
 .gamemode, .score {
     width: min(15vw, 400px);
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+form#select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+select {
+    appearance: none;
+    outline: none;
+    border: none;
+    background-color: var(--font);
+    border-radius: 25px;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: var(--bgc);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+select:hover {
+    transform: scale(1.1);
 }
 
 .modal {
@@ -79,6 +145,21 @@ body {
     gap: 10px;
 }
 
-.square {
-    border: 1px solid black;
+button.restart {
+    background-color: var(--bgc);
+    border-style: none;
+}
+
+button i {
+    color: var(--font);
+    transition: all 0.3s;
+}
+
+button i:hover {
+    transform: scale(1.1);
+    color: #c28cbc;
+}
+
+footer a {
+    color: var(--font);
 }
