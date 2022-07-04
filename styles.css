@@ -93,6 +93,7 @@ select {
     color: var(--bgc);
     cursor: pointer;
     transition: all 0.3s;
+    text-align: center;
 }
 
 select:hover {
@@ -108,15 +109,19 @@ select:hover {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
+    position: relative;
     background-color: #fefefe;
     margin: 15% auto;
-    width: 50%;
+    width: 30%;
     display: flex;
     justify-content: center;
+    background-color: var(--grape);
+    border-radius: 25px;
+    padding: 20px;
 }
 
 .modal form {
@@ -125,6 +130,53 @@ select:hover {
     align-items: center;
     justify-content: center;
     width: 80%;
+}
+
+.modal form input {
+    margin-bottom: 30px;
+    margin-top: 7px;
+    outline: none;
+    border-radius: 25px;
+    border: none;
+    padding-left: 10px;
+    background-color: var(--font);
+    font-size: 16px;
+    color: var(--bgc);
+}
+
+button#submit {
+    border-style: none;
+    border-radius: 12px;
+    padding: 6px 12px;
+    background-color: var(--grape);
+    font-family: 'Heebo', sans-serif;
+    color: var(--bgc);
+    font-size: 20px;
+    transition: all 0.2s;
+}
+
+button#submit:hover {
+    background-color: var(--bgc);
+    color: var(--font);
+}
+
+button#close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    border-style: none;
+    border-radius: 50%;
+    padding: 0 7px;
+    background-color: var(--grape);
+    font-family: 'Heebo', sans-serif;
+    color: var(--bgc);
+    font-size: 20px;
+    transition: all 0.2s;
+}
+
+button#close:hover {
+    background-color: var(--bgc);
+    color: var(--font);
 }
 
 .score {
