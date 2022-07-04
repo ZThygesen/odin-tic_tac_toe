@@ -8,9 +8,54 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="message">Player X's turn</div>
-    <div class="board"></div>
-    <button class="restart">Restart</button>
+    <header>
+        <h1>Tic Tac Toe</h1>
+    </header>
+    <div class="content">
+        <div class="message">You vs Computer</div>
+        <div class="play-area">
+            <div class="gamemode">
+                <form>
+                    <label for="mode">Change gamemode:</label>
+                    <select id="mode">
+                        <option value="computer">You vs Computer</option>
+                        <option value="two-player">Player vs Player</option>
+                        <option value="unbeatable">Unbeatable</option>
+                    </select>
+                </form>
+                <div class="modal">
+                    <div class="modal-content">
+                        <form>
+                            <button type="button" id="close">Close</button>
+                            <label for="player-one">Player One's Name</label>
+                            <input type="text" id="player-one" required>
+
+                            <label for="player-two">Player Two's Name</label>
+                            <input type="text" id="player-two" required>
+
+                            <button type="submit" id="submit">Play</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="board"></div>
+            <div class="score">
+                <p>Score</p>
+                <div class="score-board">
+                    <div class="left">
+                        <div class="player">You</div>
+                        <div class="player-score">0</div>
+                    </div>
+                    <div class="right">
+                        <div class="player">Computer</div>
+                        <div class="player-score">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="restart">Restart</button>
+    </div>
+    <footer>Made by ZThygesen</footer>
     <script src="./script.js"></script>
 </body>
 </html>
